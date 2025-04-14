@@ -139,7 +139,7 @@ class TerminalAudioVisualizer:
             self.setup_colors(stdscr)
         
         stdscr.timeout(0)  # Non-blocking input
-        stdscr.clear()
+        stdscr.erase()
         
         # Initialize all visualizers
         for visualizer in self.visualizers:
@@ -175,7 +175,7 @@ class TerminalAudioVisualizer:
                     spectrum = self.get_audio_data()
                     
                     # Clear screen
-                    stdscr.clear()
+                    stdscr.erase()
                     
                     # Update hue offset
                     self.hue_offset = (self.hue_offset + 0.005) % 1.0
